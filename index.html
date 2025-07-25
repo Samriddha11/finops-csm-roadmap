@@ -1,3 +1,10 @@
+Okay, I understand. You want to remove the SVG infographic from the HTML entirely.
+
+I will remove the entire `<section id="calibration-journey" ...>` block that contains the SVG infographic. The rest of the HTML structure and content, including the text description of the FinOps Calibration Team, will remain as they were in the previous version.
+
+Here's the updated HTML:
+
+```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -68,6 +75,7 @@
         <nav class="container mx-auto px-6 py-3">
             <ul class="flex justify-center space-x-4 md:space-x-8">
                 <li><a href="#problems" class="font-semibold text-gray-600 hover:text-[#0048BA] transition-colors">Challenges</a></li>
+                <li><a href="#calibration-team" class="font-semibold text-gray-600 hover:text-[#0048BA] transition-colors">Calibration Team</a></li>
                 <li><a href="#impact" class="font-semibold text-gray-600 hover:text-[#0048BA] transition-colors">Impact</a></li>
                 <li><a href="#use-cases" class="font-semibold text-gray-600 hover:text-[#0048BA] transition-colors">Case Studies</a></li>
                 <li><a href="#solutions" class="font-semibold text-gray-600 hover:text-[#0048BA] transition-colors">Solutions</a></li>
@@ -103,21 +111,21 @@
                     <p class="text-gray-600">Variances in cloud provider reporting and custom enterprise deals make our "one-size-fits-all" CCM reporting inaccurate, impacting the entire toolchain.</p>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 lg:col-span-1 md:col-span-2 lg:col-span-1">
-                     <div class="flex items-center mb-4">
+                    <div class="flex items-center mb-4">
                         <span class="text-3xl mr-4">🛠️</span>
                         <h3 class="text-xl font-bold text-[#0048BA]">Pre-Sales Misconfiguration</h3>
                     </div>
                     <p class="text-gray-600">Initial setup errors by sales engineers create significant cost issues, requiring months of corrective effort from the Professional Service team.</p>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 md:col-span-1">
-                     <div class="flex items-center mb-4">
+                    <div class="flex items-center mb-4">
                         <span class="text-3xl mr-4">⏳</span>
                         <h3 class="text-xl font-bold text-[#0048BA]">Prolonged Onboarding</h3>
                     </div>
                     <p class="text-gray-600">High-impact issues arise during onboarding, and engineering delays leave customers feeling the process is incomplete, preventing basic FinOps adoption.</p>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 md:col-span-1">
-                     <div class="flex items-center mb-4">
+                    <div class="flex items-center mb-4">
                         <span class="text-3xl mr-4">🔥</span>
                         <h3 class="text-xl font-bold text-[#0048BA]">Reactive Engagement</h3>
                     </div>
@@ -126,6 +134,45 @@
             </div>
         </section>
 
+        <section id="calibration-team" class="my-24 scroll-mt-20 bg-gradient-to-r from-[#0048BA] to-[#7A42A3] text-white p-8 rounded-lg shadow-xl">
+            <h2 class="text-3xl font-bold text-center mb-6">Introducing the FinOps Calibration Team</h2>
+            <p class="text-lg text-center mb-8 max-w-3xl mx-auto opacity-90">
+                At the heart of our proactive approach is the **FinOps Calibration Team** – a dedicated group of FinOps data experts. Their mission is to ensure financial accuracy from day one, mitigating complex cost reporting challenges and fostering immediate customer trust.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white bg-opacity-10 p-5 rounded-lg border border-white border-opacity-20 backdrop-filter backdrop-blur-sm">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center"><span class="text-2xl mr-2">📊</span> Data Expertise</h3>
+                    <p class="text-sm opacity-85">Proficient with diverse cloud provider billing models (AWS, Azure, GCP) and leading FinOps tools like AWS Cost Explorer, Cloudability, GCP Cost Explorer, and Kubecost. They speak the language of cloud finance fluently.</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-5 rounded-lg border border-white border-opacity-20 backdrop-filter backdrop-blur-sm">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center"><span class="text-2xl mr-2">🤝</span> Early Collaboration with Sales</h3>
+                    <p class="text-sm opacity-85">Collaborating with the Sales team from the outset, the Calibration Team ensures that our cost data aligns seamlessly with customers' existing cost reporting systems or establishes accurate baselines for new FinOps adopters.</p>
+                </div>
+                <div class="bg-white bg-opacity-10 p-5 rounded-lg border border-white border-opacity-20 backdrop-filter backdrop-blur-sm">
+                    <h3 class="text-xl font-semibold mb-3 flex items-center"><span class="text-2xl mr-2">🎯</span> Precision Cost Matching</h3>
+                    <p class="text-sm opacity-85">Their primary focus is to match raw cost data, reconcile discrepancies stemming from amortized vs. net amortized costs, enterprise discounts, and promotions, and address any misconfigurations.</p>
+                </div>
+            </div>
+            <h3 class="text-2xl font-bold text-center mt-12 mb-6">Confronting Key Calibration Challenges Head-On</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-100">
+                <div class="bg-white bg-opacity-15 p-5 rounded-lg border border-white border-opacity-20 backdrop-filter backdrop-blur-sm">
+                    <h4 class="font-semibold mb-2">1. Raw Cost Data Mismatch</h4>
+                    <p class="text-sm opacity-85">They tackle the pervasive issue of **raw cost not matching existing tools**, meticulously comparing and adjusting data to ensure consistency and trust in reporting.</p>
+                </div>
+                <div class="bg-white bg-opacity-15 p-5 rounded-lg border border-white border-opacity-20 backdrop-filter backdrop-blur-sm">
+                    <h4 class="font-semibold mb-2">2. Complex Billing Nuances</h4>
+                    <p class="text-sm opacity-85">They cut through the confusion of **amortized, net amortized costs, enterprise discounts, and promotions**, providing clarity and accurate reflection of true spend.</p>
+                </div>
+                <div class="bg-white bg-opacity-15 p-5 rounded-lg border border-white border-opacity-20 backdrop-filter backdrop-blur-sm">
+                    <h4 class="font-semibold mb-2">3. Kubernetes Cost Reporting Accuracy</h4>
+                    <p class="text-sm opacity-85">They address issues like **misconfiguration of K8s delegates** that lead to incorrect cost reporting, ensuring Kubernetes environments are accurately represented.</p>
+                </div>
+                <div class="bg-white bg-opacity-15 p-5 rounded-lg border border-white border-opacity-20 backdrop-filter backdrop-blur-sm">
+                    <h4 class="font-semibold mb-2">4. Cloud Provider Billing Model Compatibility</h4>
+                    <p class="text-sm opacity-85">They bridge the gap between **different billing models of cloud providers and their compatibility with Harness**, preventing endless issues and customer burnout by ensuring seamless integration and accurate data translation.</p>
+                </div>
+            </div>
+        </section>
         <section id="impact" class="my-24 scroll-mt-20">
             <h2 class="text-3xl font-bold text-center mb-2 text-[#7A42A3]">Visualizing the Business Impact</h2>
             <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">These challenges are not isolated; they create significant drags on customer satisfaction, onboarding velocity, and engineering resources.</p>
@@ -161,7 +208,7 @@
                 </div>
                 <div class="bg-white rounded-lg shadow-lg p-6 solution-card">
                     <h3 class="text-xl font-bold text-[#0048BA] mb-2">Transunion: Cloudability Cost Mismatch</h3>
-                    <p class="text-gray-600">Transunion experienced an ongoing cost mismatch where customer expectation to match data with the existing Cloudability took several turnaround times. Later on, it was discovered that they had some enterprise discounts with GCP which was causing cost mismatch. This took some time to realize, as at times, due to lack of information on the customer side as well, the default tool behavior and cloud companies writing data to CUR files cause issues like these.</p>
+                    <p class="text-600">Transunion experienced an ongoing cost mismatch where customer expectation to match data with the existing Cloudability took several turnaround times. Later on, it was discovered that they had some enterprise discounts with GCP which was causing cost mismatch. This took some time to realize, as at times, due to lack of information on the customer side as well, the default tool behavior and cloud companies writing data to CUR files cause issues like these.</p>
                 </div>
             </div>
         </section>
@@ -258,7 +305,7 @@
                             const item = tooltipItems[0];
                             let label = item.chart.data.labels[item.dataIndex];
                             if (Array.isArray(label)) {
-                              return label.join(' ');
+                                return label.join(' ');
                             }
                             return label;
                         }
@@ -319,9 +366,9 @@
                         }
                     },
                     y: {
-                         grid: {
-                            display: false
-                        }
+                            grid: {
+                                display: false
+                            }
                     }
                 }
             }
@@ -390,3 +437,4 @@
     </script>
 </body>
 </html>
+```
