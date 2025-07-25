@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -69,10 +69,10 @@
         <nav class="container mx-auto px-6 py-3">
             <ul class="flex justify-center space-x-4 md:space-x-8">
                 <li><a href="#problems" class="font-semibold text-gray-600 hover:text-[#0048BA] transition-colors">Challenges</a></li>
-                <li><a href="#calibration-team" class="font-semibold text-gray-600 hover:text-[#0048BA] transition-colors">Calibration Team</a></li>
                 <li><a href="#impact" class="font-semibold text-gray-600 hover:text-[#0048BA] transition-colors">Impact</a></li>
-                <li><a href="#use-cases" class="font-semibold text-gray-600 hover:text-[#0048BA] transition-colors">Case Studies</a></li>
-                <li><a href="#solutions" class="font-semibold text-gray-600 hover:text-[#0048BA] transition-colors">Solutions</a></li>
+                <li><a href="#visualizing-impact" class="font-semibold text-gray-600 hover:text-[#0048BA] transition-colors">Business Impact</a></li>
+                <li><a href="#solutions" class="font-semibold text-gray-600 hover:text-[#0048BA] transition-colors">5-Point Plan</a></li>
+                <li><a href="#calibration-team" class="font-semibold text-gray-600 hover:text-[#0048BA] transition-colors">Calibration Team</a></li>
                 <li><a href="#journey" class="font-semibold text-gray-600 hover:text-[#0048BA] transition-colors">New Journey</a></li>
                 <li><a id="downloadBtn" class="font-semibold text-gray-600 hover:text-[#0048BA] transition-colors">Download</a></li>
             </ul>
@@ -128,8 +128,76 @@
             </div>
         </section>
 
+        <section id="impact" class="my-24 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#7A42A3]">Real-World Impact: The Cost of Early Misconfiguration</h2>
+            <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">These case studies highlight how initial setup errors can lead to prolonged issues and significant customer frustration, underscoring the need for proactive cost calibration.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 solution-card">
+                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">Coca-Cola: Organizational Billing Discrepancies</h3>
+                    <p class="text-gray-600">Initial billing configurations with Harness CCM did not account for Coca-Cola's unique organizational-level billing arrangements. This led to incorrect reporting of savings from autostopping and asset governance for 4-5 months post-onboarding, requiring extensive engineering effort to resolve. This highlights how crucial accurate initial setup is, especially for large enterprises with complex billing structures.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 solution-card">
+                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">Coles: Kubernetes Cost Reporting Challenges</h3>
+                    <p class="text-gray-600">When the PS team was doing onboarding, it was found that due to several reasons, Kubernetes cost reporting was not good, and some of the issues were because the delegates were not properly sized. However, the PS team was not involved during the initial configuration, and it took months to discover this issue after long technical sessions back and forth with engineering. Till date, this is an issue with Coles.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 solution-card">
+                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">Transunion: Cloudability Cost Mismatch</h3>
+                    <p class="text-600">Transunion experienced an ongoing cost mismatch where customer expectation to match data with the existing Cloudability took several turnaround times. Later on, it was discovered that they had some enterprise discounts with GCP which was causing cost mismatch. This took some time to realize, as at times, due to lack of information on the customer side as well, the default tool behavior and cloud companies writing data to CUR files cause issues like these.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="visualizing-impact" class="my-24 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-2 text-[#7A42A3]">Visualizing the Business Impact</h2>
+            <p class="text-center text-gray-500 mb-4 max-w-2xl mx-auto">These challenges are not isolated; they create significant drags on customer satisfaction, onboarding velocity, and engineering resources.</p>
+            <p class="text-center text-sm text-red-500 mb-12 max-w-2xl mx-auto font-semibold">Note: All data presented in these charts is for representation purposes only and does not reflect actual customer data.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white rounded-lg shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-center mb-4 text-[#0048BA]">Primary Drivers of Customer Dissatisfaction</h3>
+                    <div class="chart-container">
+                        <canvas id="dissatisfactionChart"></canvas>
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-4">This chart illustrates the relative impact of key problem areas on customer satisfaction scores, with reporting inaccuracies and onboarding delays being the most significant factors.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-center mb-4 text-[#0048BA]">Breakdown of Onboarding Delays</h3>
+                    <div class="chart-container">
+                        <canvas id="onboardingDelayChart"></canvas>
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-4">This chart shows the main causes for extended onboarding times. Correcting pre-sales misconfigurations and waiting for engineering fixes for P1 issues consume the majority of the time.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="solutions" class="my-24 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-2 text-[#7A42A3]">A 5-Point Plan for Transformation</h2>
+            <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">To address these challenges head-on, we propose a strategic overhaul of our support, processes, and engineering priorities.</p>
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow-md p-6 solution-card">
+                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">1. Introduce Premium Technical Support</h3>
+                    <p class="text-gray-600">Launch a chargeable, expert-led support tier offering proactive FinOps consulting, ensuring customers continuously derive value and have access to deep expertise.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 solution-card">
+                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">2. Create a "Cost Calibration" Team</h3>
+                    <p class="text-gray-600">Dedicate a small engineering team to assist Sales Engineers, ensuring cost reporting is accurate from day one and eliminating costly downstream corrections.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 solution-card">
+                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">3. Redefine "Onboarding Complete"</h3>
+                    <p class="text-gray-600">Professional Service (PS) teams must retain ownership and follow-up until all customer-blocking P1 issues are fully resolved, leveraging the rapport they've built.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 solution-card">
+                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">4. Implement Warm Handovers to CSMs</h3>
+                    <p class="text-gray-600">Establish a formal, technical handover from PS to CSMs. If new technical issues arise, our expert team must be engaged immediately for technical cadence calls, not just ticket follow-ups.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 solution-card">
+                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">5. Prioritize Enhancements by Impact</h3>
+                    <p class="text-gray-600">Shift engineering focus to prioritize feature enhancements based on their strategic value and potential impact across the customer base, not just the size of the requesting customer.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="calibration-team" class="my-24 scroll-mt-20 bg-gradient-to-r from-[#0048BA] to-[#7A42A3] text-white p-8 rounded-lg shadow-xl">
-            <h2 class="text-3xl font-bold text-center mb-6">Introducing the FinOps Calibration Team</h2>
+            <h2 class="text-3xl font-bold text-center mb-6">Introducing the FinOps Cost Calibration Team</h2>
             <p class="text-lg text-center mb-8 max-w-3xl mx-auto opacity-90">
                 At the heart of our proactive approach is the **FinOps Calibration Team** – a dedicated group of FinOps data experts. Their mission is to ensure financial accuracy from day one, mitigating complex cost reporting challenges and fostering immediate customer trust.
             </p>
@@ -164,72 +232,6 @@
                 <div class="bg-white bg-opacity-15 p-5 rounded-lg border border-white border-opacity-20 backdrop-filter backdrop-blur-sm">
                     <h4 class="font-semibold mb-2">4. Cloud Provider Billing Model Compatibility</h4>
                     <p class="text-sm opacity-85">They bridge the gap between **different billing models of cloud providers and their compatibility with Harness**, preventing endless issues and customer burnout by ensuring seamless integration and accurate data translation.</p>
-                </div>
-            </div>
-        </section>
-        <section id="impact" class="my-24 scroll-mt-20">
-            <h2 class="text-3xl font-bold text-center mb-2 text-[#7A42A3]">Visualizing the Business Impact</h2>
-            <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">These challenges are not isolated; they create significant drags on customer satisfaction, onboarding velocity, and engineering resources.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div class="bg-white rounded-lg shadow-xl p-6">
-                    <h3 class="text-xl font-bold text-center mb-4 text-[#0048BA]">Primary Drivers of Customer Dissatisfaction</h3>
-                    <div class="chart-container">
-                        <canvas id="dissatisfactionChart"></canvas>
-                    </div>
-                    <p class="text-center text-sm text-gray-500 mt-4">This chart illustrates the relative impact of key problem areas on customer satisfaction scores, with reporting inaccuracies and onboarding delays being the most significant factors.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-xl p-6">
-                    <h3 class="text-xl font-bold text-center mb-4 text-[#0048BA]">Breakdown of Onboarding Delays</h3>
-                    <div class="chart-container">
-                        <canvas id="onboardingDelayChart"></canvas>
-                    </div>
-                    <p class="text-center text-sm text-gray-500 mt-4">This chart shows the main causes for extended onboarding times. Correcting pre-sales misconfigurations and waiting for engineering fixes for P1 issues consume the majority of the time.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="use-cases" class="my-24 scroll-mt-20">
-            <h2 class="text-3xl font-bold text-center mb-12 text-[#7A42A3]">Real-World Impact: The Cost of Early Misconfiguration</h2>
-            <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">These case studies highlight how initial setup errors can lead to prolonged issues and significant customer frustration, underscoring the need for proactive cost calibration.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-lg p-6 solution-card">
-                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">Coca-Cola: Organizational Billing Discrepancies</h3>
-                    <p class="text-gray-600">Initial billing configurations with Harness CCM did not account for Coca-Cola's unique organizational-level billing arrangements. This led to incorrect reporting of savings from autostopping and asset governance for 4-5 months post-onboarding, requiring extensive engineering effort to resolve. This highlights how crucial accurate initial setup is, especially for large enterprises with complex billing structures.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6 solution-card">
-                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">Coles: Kubernetes Cost Reporting Challenges</h3>
-                    <p class="text-gray-600">When the PS team was doing onboarding, it was found that due to several reasons, Kubernetes cost reporting was not good, and some of the issues were because the delegates were not properly sized. However, the PS team was not involved during the initial configuration, and it took months to discover this issue after long technical sessions back and forth with engineering. Till date, this is an issue with Coles.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6 solution-card">
-                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">Transunion: Cloudability Cost Mismatch</h3>
-                    <p class="text-600">Transunion experienced an ongoing cost mismatch where customer expectation to match data with the existing Cloudability took several turnaround times. Later on, it was discovered that they had some enterprise discounts with GCP which was causing cost mismatch. This took some time to realize, as at times, due to lack of information on the customer side as well, the default tool behavior and cloud companies writing data to CUR files cause issues like these.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="solutions" class="my-24 scroll-mt-20">
-            <h2 class="text-3xl font-bold text-center mb-2 text-[#7A42A3]">A 5-Point Plan for Transformation</h2>
-            <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">To address these challenges head-on, we propose a strategic overhaul of our support, processes, and engineering priorities.</p>
-            <div class="space-y-6">
-                <div class="bg-white rounded-lg shadow-md p-6 solution-card">
-                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">1. Introduce Premium Technical Support</h3>
-                    <p class="text-gray-600">Launch a chargeable, expert-led support tier offering proactive FinOps consulting, ensuring customers continuously derive value and have access to deep expertise.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 solution-card">
-                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">2. Create a "Cost Calibration" Team</h3>
-                    <p class="text-gray-600">Dedicate a small engineering team to assist Sales Engineers, ensuring cost reporting is accurate from day one and eliminating costly downstream corrections.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 solution-card">
-                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">3. Redefine "Onboarding Complete"</h3>
-                    <p class="text-gray-600">Professional Service (PS) teams must retain ownership and follow-up until all customer-blocking P1 issues are fully resolved, leveraging the rapport they've built.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 solution-card">
-                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">4. Implement Warm Handovers to CSMs</h3>
-                    <p class="text-gray-600">Establish a formal, technical handover from PS to CSMs. If new technical issues arise, our expert team must be engaged immediately for technical cadence calls, not just ticket follow-ups.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 solution-card">
-                    <h3 class="text-xl font-bold text-[#0048BA] mb-2">5. Prioritize Enhancements by Impact</h3>
-                    <p class="text-gray-600">Shift engineering focus to prioritize feature enhancements based on their strategic value and potential impact across the customer base, not just the size of the requesting customer.</p>
                 </div>
             </div>
         </section>
@@ -431,4 +433,4 @@
     </script>
 </body>
 </html>
-
+```
